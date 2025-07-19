@@ -19,22 +19,12 @@ const subtract = function(a, b) {
 	return a - b;
 };
 
-const sum = function(s) {
-  let result = 0
-	for (let i = 0; i < s.length; i++ ) {
-    result += s[i];
-  };
-  return result;
+const sum = function(array) {
+  return array.reduce((total, current) => total + current, 0);
 };
 
-const multiply = function(a, b) {
-  if (typeof a === "undefined" || typeof b === "undefined") {
-    return undefined;
-  }
-  if (typeof a !== "number" || typeof b !== "number") {
-    return "Math error";
-  }
-  return a * b;
+const multiply = function(array) {
+  return array.reduce((product, current) => product * current, 0);
 };
 
 const power = function(a, exp) {
